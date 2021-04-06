@@ -1,0 +1,37 @@
+name: test 
+
+on: push
+
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php-versions: ['7.3','7.4']
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
+
+    - name: Install PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ matrix.php-versions }}
+
+    - name: Check PHP Version
+      run: php -v
+
+    - name: Composer dependencies
+      run: composer install --no-ansi --no-interaction --no-scripts --no-suggest --no-progress --prefer-dist
+
+    - name: Run Unit Test
+      run: |
+        ./vendor/bin/phpunit
+      env:
+        EGHL_PASSWORD: ${{ secrets.EGHL_PASSWORD }}
+        EGHL_SERVICE_ID: ${{ secrets.EGHL_SERVICE_ID }}
+        EGHL_SERVICE_URL: ${{ secrets.EGHL_SERVICE_URL }}
+        MERCHANT_RETURN_URL: ${{ secrets.MERCHANT_RETURN_URL }}
+        MERCHANT_APPROVAL_URL: ${{ secrets.MERCHANT_APPROVAL_URL }}
+        MERCHANT_UNAPPROVAL_URL: ${{ secrets.MERCHANT_UNAPPROVAL_URL }}
+        MERCHANT_CALLBACK_URL: ${{ secrets.MERCHANT_CALLBACK_URL }}
