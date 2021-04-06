@@ -1,0 +1,33 @@
+{
+    "name": "killallskywalker/eghl-laravel",
+    "description": "Package to integrate EGHL payment gateway with laravel .",
+    "type": "library",
+    "authors": [
+        {
+            "name": "killallskywalker",
+            "email": "firdausdaus98@ymail.com"
+        }
+    ],
+    "require": {
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Killallskywalker\\Eghl\\": "src",
+            "Killallskywalker\\Eghl\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Killallskywalker\\Eghl\\EghlServiceProvider"
+            ],
+            "aliases": {
+                "Eghl": "Killallskywalker\\Eghl\\Facades\\Eghl"
+            }
+        }
+    }
+}
