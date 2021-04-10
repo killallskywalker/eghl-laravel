@@ -25,7 +25,22 @@
   </testsuites>
   <php>
     <ini name="display_errors" value="true"/>
+    <env name="EGHL_PASSWORD" value="password"/>
+    <env name="EGHL_SERVICE_ID" value="serviceId"/>
+    <env name="EGHL_SERVICE_URL" value="http://your-eghl-service-url.com"/>
+    <env name="MERCHANT_RETURN_URL" value="http://your-return-url.com"/>
+    <env name="MERCHANT_APPROVAL_URL" value="http://your-approval-url.com"/>
+    <env name="MERCHANT_UNAPPROVAL_URL" value="http://your-unapproval-url.com"/>
+    <env name="MERCHANT_CALLBACK_URL" value="http://your-callback-url.com"/>
     <env name="DB_CONNECTION" value="testing"/>
     <env name="APP_KEY" value="base64:2fl+Ktvkfl+Fuz4Qp/A75G2RTiWVA/ZoKZvp6fiiM10="/>
   </php>
 </phpunit>
+
+<!-- EGHL_PASSWORD=123456
+EGHL_SERVICE_ID=123456
+EGHL_SERVICE_URL=https://eghl.services
+MERCHANT_RETURN_URL=https://www.return-url.com
+MERCHANT_APPROVAL_URL=https://www.approval-url.com
+MERCHANT_UNAPPROVAL_URL=https://www.unapproval-url.com
+MERCHANT_CALLBACK_URL=https://www.callback-url.com -->

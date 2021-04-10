@@ -24,8 +24,8 @@ class EghlTest extends TestCase
         ];
 
         $url = Eghl::processPaymentRequest($data);
-     
-        return $this->assertEquals($url , "http://localhost?TransactionType=SALE&PymtMethod=ANY&CurrencyCode=MYR&HashValue=e2f2564329977c39be297ef49efcdf7ac2f8e8b4f8e9b442eefbe3fde06db6a4&Amount=228.00&PaymentID=TestingId&OrderNumber=IJKLMN&PaymentDesc=ADNEXIO&CustName=Jason&CustEmail=Jasonabc%40gmail.com&CustPhone=60121235678");
+
+        return $this->assertEquals($url , "http://your-eghl-service-url.com?TransactionType=SALE&PymtMethod=ANY&ServiceID=serviceId&MerchantReturnURL=http%3A%2F%2Fyour-return-url.com&MerchantCallBackURL=http%3A%2F%2Fyour-callback-url.com&CurrencyCode=MYR&HashValue=46e682c196de2d4dc44e58436ecff9a8538493969faf7d92882df98be0d146a4&Amount=228.00&PaymentID=TestingId&OrderNumber=IJKLMN&PaymentDesc=ADNEXIO&CustName=Jason&CustEmail=Jasonabc%40gmail.com&CustPhone=60121235678");
     }
 
     /**
