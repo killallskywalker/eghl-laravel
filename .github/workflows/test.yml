@@ -28,10 +28,10 @@ jobs:
       run: |
         ./vendor/bin/phpunit
       env:
-        EGHL_PASSWORD: ${{ secrets.EGHL_PASSWORD }}
-        EGHL_SERVICE_ID: ${{ secrets.EGHL_SERVICE_ID }}
-        EGHL_SERVICE_URL: ${{ secrets.EGHL_SERVICE_URL }}
-        MERCHANT_RETURN_URL: ${{ secrets.MERCHANT_RETURN_URL }}
-        MERCHANT_APPROVAL_URL: ${{ secrets.MERCHANT_APPROVAL_URL }}
-        MERCHANT_UNAPPROVAL_URL: ${{ secrets.MERCHANT_UNAPPROVAL_URL }}
-        MERCHANT_CALLBACK_URL: ${{ secrets.MERCHANT_CALLBACK_URL }}
+        EGHL_PASSWORD: "password"
+        EGHL_SERVICE_ID: "serviceId"
+        EGHL_SERVICE_URL: "http://your-eghl-service-url.com"
+        MERCHANT_RETURN_URL: "http://your-return-url.com"
+        MERCHANT_APPROVAL_URL: "http://your-approval-url.com"
+        MERCHANT_UNAPPROVAL_URL: "http://your-unapproval-url.com"
+        MERCHANT_CALLBACK_URL: "http://your-callback-url.com"
