@@ -36,11 +36,3 @@
     <env name="APP_KEY" value="base64:2fl+Ktvkfl+Fuz4Qp/A75G2RTiWVA/ZoKZvp6fiiM10="/>
   </php>
 </phpunit>
-
-<!-- EGHL_PASSWORD=123456
-EGHL_SERVICE_ID=123456
-EGHL_SERVICE_URL=https://eghl.services
-MERCHANT_RETURN_URL=https://www.return-url.com
-MERCHANT_APPROVAL_URL=https://www.approval-url.com
-MERCHANT_UNAPPROVAL_URL=https://www.unapproval-url.com
-MERCHANT_CALLBACK_URL=https://www.callback-url.com -->
